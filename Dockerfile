@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y -q \
     pandoc \
     libcurl4-openssl-dev
 
-RUN apt-get install -q -y ipython-notebook
+RUN pip2 install ipython[notebook]
 
 WORKDIR /
 RUN git clone https://github.com/ipython/docker-notebook.git
